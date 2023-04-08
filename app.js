@@ -33,8 +33,6 @@ app.listen(port, () => {
 /**
  * Catalogo API
  * 
- * TODO: add a model for the pruducts
- *  and verify inputs.
  */
 app.get("/catalogo", (req, res) => {
 	res.redirect("/catalogo/productos");

@@ -1,50 +1,92 @@
 [
-    {
-        "id": 1,
-        "nombre": "Emperador",
-        "descripcion": "Silla realizada en cuero 100%",
-        "urlimagen": "../../assets/img/silla1.jpg",
-        "precio": 90,
-        "cantidad": 2000
-    },
-    {
-        "id": 2,
-        "nombre": "Atun",
-        "descripcion": "Silla realizada algodon 100% sin manchas",
-        "urlimagen": "../../assets/img/silla2.jpg",
-        "precio": 90,
-        "cantidad": 2000
-    },
-    {
-        "id": 3,
-        "nombre": "Inycom",
-        "descripcion": "Silla realizada con personal de Inycom",
-        "urlimagen": "../../assets/img/silla3.jpg",
-        "precio": 80,
-        "cantidad": 2000
-    },
-    {
-        "id": 4,
-        "nombre": "Angular",
-        "descripcion": "Silla realizada con la piel de los que no sepan realizar este ejercicio",
-        "urlimagen": "../../assets/img/silla4.jpg",
-        "precio": 70,
-        "cantidad": 2000
-    },
-    {
-        "id": 5,
-        "nombre": "Paro",
-        "descripcion": "Silla ergonomica para cuando vayas a la lista del paro",
-        "urlimagen": "../../assets/img/silla5.jpg",
-        "precio": 60,
-        "cantidad": 2000
-    },
-    {
-        "id": 6,
-        "nombre": "Empleo",
-        "descripcion": "Silla realizada para los que saquen el ejercicio correctamente",
-        "urlimagen": "../../assets/img/silla6.jpg",
-        "precio": 50,
-        "cantidad": 2000
-    }
+	{
+		"id": 1,
+		"nombre": "Silla de escritorio gris",
+		"puntuacion": 4.5,
+		"descripcion": "Silla de escritorio ergonómica con respaldo alto y apoyabrazos ajustables. Ideal para una cómoda jornada laboral.",
+		"categoria": "Oficina",
+		"urlimagen": "/assets/img/silla1.jpg",
+		"precio": 99.99,
+		"cantidad": 0
+	},
+	{
+		"id": 2,
+		"nombre": "Silla de comedor blanca",
+		"puntuacion": 3.8,
+		"descripcion": "Silla de comedor tapizada en tela blanca con patas de madera maciza. Combinable con cualquier estilo de mesa.",
+		"categoria": "Comedor",
+		"urlimagen": "/assets/img/silla2.jpg",
+		"precio": 49.99,
+		"cantidad": 30
+	},
+	{
+		"id": 3,
+		"nombre": "Silla de jardín con cojín",
+		"puntuacion": 4.2,
+		"descripcion": "Silla de jardín de aluminio y rattan con cojín incluido. Resistente a la intemperie y a los rayos UV.",
+		"categoria": "Jardín",
+		"urlimagen": "/assets/img/silla3.jpg",
+		"precio": 89.99,
+		"cantidad": 25
+	},
+	{
+		"id": 4,
+		"nombre": "Silla de oficina blanca",
+		"puntuacion": 4.0,
+		"descripcion": "Silla de oficina ergonómica con respaldo medio y apoyabrazos ajustables. Ideal para trabajos en espacios reducidos.",
+		"categoria": "Oficina",
+		"urlimagen": "/assets/img/silla4.jpg",
+		"precio": 79.99,
+		"cantidad": 40
+	},
+	{
+		"id": 5,
+		"nombre": "Silla de comedor marrón",
+		"puntuacion": 1.6,
+		"descripcion": "Silla de comedor tapizada en cuero marrón con patas de madera maciza. Estilo clásico y elegante.",
+		"categoria": "Comedor",
+		"urlimagen": "/assets/img/silla5.jpg",
+		"precio": 69.99,
+		"cantidad": 20
+	},
+	{
+		"id": 6,
+		"nombre": "Silla de jardín con reposabrazos",
+		"puntuacion": 4.2,
+		"descripcion": "Silla de jardín de metal con reposabrazos y cojín incluido. Resistente a la intemperie y fácil de limpiar.",
+		"categoria": "Jardín",
+		"urlimagen": "/assets/img/silla6.jpg",
+		"precio": 99.99,
+		"cantidad": 15
+	},
+	{
+		"id": 7,
+		"nombre": "Silla de oficina negra",
+		"puntuacion": 4.5,
+		"descripcion": "Silla de oficina ergonómica con respaldo alto y apoyabrazos ajustables. Ideal para una cómoda jornada laboral.",
+		"categoria": "Oficina",
+		"urlimagen": "/assets/img/silla1.jpg",
+		"precio": 99.99,
+		"cantidad": 50
+	},
+	{
+		"id": 8,
+		"nombre": "Silla de comedor gris",
+		"puntuacion": 3.8,
+		"descripcion": "Silla de comedor tapizada en tela gris con patas de madera maciza. Combinable con cualquier estilo de mesa.",
+		"categoria": "Comedor",
+		"urlimagen": "/assets/img/silla2.jpg",
+		"precio": 49.99,
+		"cantidad": 30
+	},
+	{
+		"id": 9,
+		"nombre": "Silla de jardín plegable",
+		"puntuacion": 3,
+		"descripcion": "Silla de jardín de madera maciza plegable para mayor comodidad de almacenamiento. Resistente a la intemperie.",
+		"categoria": "Jardín",
+		"urlimagen": "/assets/img/silla3.jpg",
+		"precio": 79.99,
+		"cantidad": 20
+	}
 ]
