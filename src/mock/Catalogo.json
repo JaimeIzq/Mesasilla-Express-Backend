@@ -88,5 +88,58 @@
 		"urlimagen": "/assets/img/silla3.jpg",
 		"precio": 79.99,
 		"cantidad": 20
-	}
+	},{
+    "id": 11,
+    "nombre": "Emperador",
+    "puntuacion": 4.5,
+    "descripcion": "Silla realizada en cuero 100%",
+    "urlimagen": "../../assets/img/silla1.jpg",
+    "categoria": "Imperial",
+    "precio": 90,
+    "cantidad": 2000
+  },
+  {
+    "id": 12,
+    "nombre": "Atun",
+    "descripcion": "Silla realizada algodon 100% sin manchas",
+    "urlimagen": "../../assets/img/silla2.jpg",
+    "precio": 90,
+    "cantidad": 2000
+  },
+  {
+    "id": 13,
+    "nombre": "Inycom",
+    "puntuacion": 4,
+    "descripcion": "Silla realizada con personal de Inycom",
+    "urlimagen": "../../assets/img/silla3.jpg",
+    "precio": 80,
+    "cantidad": 2000
+  },
+  {
+    "id": 14,
+    "nombre": "Angular",
+    "puntuacion": 4,
+    "descripcion": "Silla realizada con la piel de los que no sepan realizar este ejercicio",
+    "urlimagen": "../../assets/img/silla4.jpg",
+    "precio": 70,
+    "cantidad": 2000
+  },
+  {
+    "id": 15,
+    "nombre": "Paro",
+    "puntuacion": 0,
+    "descripcion": "Silla ergonomica para cuando vayas a la lista del paro",
+    "urlimagen": "../../assets/img/silla5.jpg",
+    "precio": 60,
+    "cantidad": 2000
+  },
+  {
+    "id": 16,
+    "nombre": "Empleo",
+    "puntuacion": 5,
+    "descripcion": "Silla realizada para los que saquen el ejercicio correctamente",
+    "urlimagen": "../../assets/img/silla6.jpg",
+    "precio": 50,
+    "cantidad": 2000
+  }
 ]
