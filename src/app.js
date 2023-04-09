@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const { v4: uuidv4 } = require("uuid");
 const uuidValidate = require("uuid");
 
-const app = express(); 
+const app = express();
 
 const port = 3000;
 
@@ -59,7 +59,7 @@ app.get("/catalogo/producto/:id", (req, res) => {
 /**
  * Create a new product
  * TODO: verify input data is correct and the id is unique.
- **/ 
+ **/
 app.put("/catalogo/productos", (req, res) => {
 	let id = catalogo.length;
 
@@ -83,7 +83,7 @@ app.put("/catalogo/productos", (req, res) => {
 /**
  * TODO: update product, Verify that the product to be updated
  *  already exists.
- **/ 
+ **/
 app.post("/catalogo/productos", (req, res) => {
 	res.send(`WIP`);
 });
@@ -91,13 +91,13 @@ app.post("/catalogo/productos", (req, res) => {
 /**
  * TODO: update product, Verify that the new id doew not exist and
  *  the product to be updated already exists.
- **/ 
+ **/
 app.post("/catalogo/producto/:id", (req, res) => {
 	let id = req.params.id;
 	let updated = new Product
 	let producto = catalogo.filter((prod) => prod.id == id);
 
-	if (preducto != null) 
+	if (preducto != null)
 		catalogo[id] = producto;
 
 	// res.json(producto);
@@ -123,7 +123,7 @@ app.post("/user/register", (req, res) => {
 
 	if (user < 1) {
 		let token = uuidv4();
-		let userId = usuarios[usuarios.length-1].id+1;
+		let userId = usuarios[usuarios.length - 1].id + 1;
 		usuarios.push({
 			"id": userId,
 			"username": username,
@@ -131,23 +131,22 @@ app.post("/user/register", (req, res) => {
 			"password": bcrypt.hashSync(password, 10),
 			"isAdmin": false
 		});
-		
+
 		tokens.push({
-			"id": user.id,
+			"id": userId,
 			"token": token
 		});
 
 		res.json({
-			"username": username,
 			"token": token
 		});
 
-		console.log("New user registered and new token. UserID: " + userId);		
-		console.log({"username": username, "token": token});
-		
+		console.log("New user registered and new token. UserID: " + userId);
+		console.log({ "username": username, "token": token });
+
 		return true;
 	}
-	
+
 	console.error("[ERROR]: Bad User registration. Data provided: ", {
 		"username": username,
 		"email": email,
@@ -172,12 +171,11 @@ app.post("/user/login", (req, res) => {
 		});
 
 		res.json({
-			"username": username,
 			"token": token
 		});
 
-		console.log("New user login, new token generated. UserID: " + user.id);			
-		console.log({"username": username, "token": token});
+		console.log("New user login, new token generated. UserID: " + user.id);
+		console.log({ "username": username, "token": token });
 		return true;
 	}
 
@@ -190,14 +188,14 @@ app.post("/user/login", (req, res) => {
 	return false;
 })
 
-app.post('/user', (req, res) => {	
-	let username = req.body.username;
+app.post('/user', (req, res) => {
 	let token = req.body.token;
-	
-	let user = usuarios.filter(user => user.username == username)[0];
-	
-	if (token != null && user != null) {
-		if (tokens.filter(t => t.token == token).length > 0) {
+	if (token != null) {
+		let currentToken = tokens.filter(t => t.token == token)[0];
+
+		if (currentToken != null) {
+			let user = usuarios.filter(user => user.id == currentToken.id)[0];
+
 			res.json({
 				"id": user.id,
 				"username": user.username,
@@ -211,12 +209,19 @@ app.post('/user', (req, res) => {
 	}
 
 	console.error(
-		"[ERROR]: Bad username or token on user data request. Name: " + username +
-		" Token: " + token
+		"[ERROR]: Bad username or token on user data request. Token: " + token
 	);
 
 	res.sendStatus(400);
 	return false;
 });
+
+/**
+ * TODO: Agregar borrado de tokens para cerrar sesiones.
+ */
+// app.post('/user/logout', (req, res) => {
+// 	let token = req.body.token;
+// 	// tokens. // .filter(user => user.token == token)[0];
+// });
 
 console.log(bcrypt.hashSync('admin', 10));
